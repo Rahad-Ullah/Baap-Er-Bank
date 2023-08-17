@@ -8,21 +8,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-primary-focus to-secondary-focus py-12 h-screen flex items-center justify-center">
-    <div class="min-w-min max-w-2xl border border-primary-content p-12 rounded-3xl bg-white">
+    <div class="min-w-min max-w-2xl border border-primary-content p-8 rounded-3xl bg-white shadow-2xl">
         <header>
-            <h1 class="text-4xl my-5 mx-6 text-center">Welcome to your 
+            <h1 class="text-3xl my-4 mx-6 text-center">Welcome to your 
                 <span class="font-semibold text-violet-600">Baap Er Bank</span> !!
             </h1>
         </header>
         <main class="">
             <div>
                 <h2 class="text-2xl text-center my-10">Please log in your account</h2>
-                    <div class="flex flex-col gap-4 my-3 max-w-sm mx-auto">
-                        <input type="email" required name="" id="email" placeholder="Email" class="p-2 px-4 rounded-md border border-primary-content focus-visible:outline-violet-600">
-                        <input type="password" required name="" id="password" placeholder="Password" class="p-2 px-4 rounded-md border border-primary-content focus-visible:outline-violet-600">
-                        <a href="" class="text-secondary -mt-3">Forgot password?</a>
+                    <div class="flex flex-col gap-3 my-3 max-w-sm mx-auto">
+                        <label for="email" class="text-sm font-semibold -mb-1">Email</label>
+                        <input type="email" required name="" id="email" placeholder="Type 'sontan@baper-bank.com'" class="p-2 px-4 rounded-md border border-primary-content focus-visible:outline-violet-600">
+                        <label for="password" class="text-sm font-semibold -mb-1">Password</label>
+                        <input type="password" required name="" id="password" placeholder="Type 'Baper banke o password lage'" class="p-2 px-4 rounded-md border border-primary-content focus-visible:outline-violet-600">
+                        <a href="" class="text-secondary text-sm -mt-1">Forgot password?</a>
                         <button id="btn-submit" class="btn btn-primary">Login</button>
-                        <a href="" class="text-center">Not a member? <span class="text-secondary">Sign up now</span></a>
+                        <a href="" class="text-center text-sm">Not a member? <span class="text-secondary">Sign up now</span></a>
                     </div>
             </div>
         </main>
@@ -34,8 +36,8 @@
             const passwordField = document.getElementById('password');
             const password = passwordField.value;
 
-            if(email === 'web@programming-hero.com'){
-                if(password === 'hello world'){
+            if(email === 'sontan@baper-bank.com'){
+                if(password === 'Baper banke o password lage'){
                     window.location.href = 'bank.html'
                 }
                 else{
