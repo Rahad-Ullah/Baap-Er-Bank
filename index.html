@@ -7,22 +7,26 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-w-min max-w-2xl mx-auto m-16 bg-green-200 py-16 rounded-3xl">
-    <header>
-        <h1 class="text-4xl my-5 mx-6 text-center">Welcome to your 
-            <span class="font-semibold text-violet-600">Baap Er Bank</span> !!
-        </h1>
-    </header>
-    <main class="">
-        <div>
-            <h2 class="text-2xl text-center my-10">Please Log in your account</h2>
-                <div class="flex flex-col gap-4 my-3 max-w-sm mx-auto">
-                    <input type="email" required name="" id="email" placeholder="Email" class="p-2 px-4 rounded-md">
-                    <input type="password" required name="" id="password" placeholder="Password" class="p-2 px-4 rounded-md">
-                    <button id="btn-submit" class="btn btn-primary">Login</button>
-                </div>
-        </div>
-    </main>
+<body class="bg-gradient-to-br from-primary-focus to-secondary-focus py-12 h-screen flex items-center justify-center">
+    <div class="min-w-min max-w-2xl border border-primary-content p-12 rounded-3xl bg-white">
+        <header>
+            <h1 class="text-4xl my-5 mx-6 text-center">Welcome to your 
+                <span class="font-semibold text-violet-600">Baap Er Bank</span> !!
+            </h1>
+        </header>
+        <main class="">
+            <div>
+                <h2 class="text-2xl text-center my-10">Please log in your account</h2>
+                    <div class="flex flex-col gap-4 my-3 max-w-sm mx-auto">
+                        <input type="email" required name="" id="email" placeholder="Email" class="p-2 px-4 rounded-md border border-primary-content focus-visible:outline-violet-600">
+                        <input type="password" required name="" id="password" placeholder="Password" class="p-2 px-4 rounded-md border border-primary-content focus-visible:outline-violet-600">
+                        <a href="" class="text-secondary -mt-3">Forgot password?</a>
+                        <button id="btn-submit" class="btn btn-primary">Login</button>
+                        <a href="" class="text-center">Not a member? <span class="text-secondary">Sign up now</span></a>
+                    </div>
+            </div>
+        </main>
+    </div>
     <script>
         document.getElementById('btn-submit').addEventListener('click', function(){
             const emailField = document.getElementById('email');
@@ -32,7 +36,7 @@
 
             if(email === 'web@programming-hero.com'){
                 if(password === 'hello world'){
-                    alert('Congrates! Valid user');
+                    window.location.href = 'bank.html'
                 }
                 else{
                     alert('Wrong password')
